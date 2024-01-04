@@ -19,9 +19,6 @@ from zstandard import ZstdCompressor, ZstdDecompressor
 if os.name == "nt":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-ROOT_DIR = Path(os.getenv("ROOT_DIR", R"F:\poe-dev\inya"))
-DATA_DIR = ROOT_DIR / "data"
-INDEX_DIR = ROOT_DIR / "index"
 INYA_DB_URI = os.getenv("INYA_DB_URI")
 
 if INYA_DB_URI is None:
